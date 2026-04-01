@@ -307,15 +307,15 @@
 // 1. Create a Google Form with one "Email" question
 // 2. Get the pre-filled link (3 dots > Get pre-filled link)
 // 3. Replace the URL below with your pre-filled link (remove the placeholder email at the end)
-const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform?usp=pp_url&entry.YOUR_FIELD_ID=";
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf3jZuD9pg1tMHCVRN0r4UzGNnUqnf3ecUkVIw67rs4mfLVuQ/viewform?usp=pp_url";
 
 function submitEmail() {
   const input = document.getElementById('email-input');
   const email = input.value.trim();
   if (!email || !email.includes('@')) { input.style.borderColor = '#F87171'; return; }
-  window.open(GOOGLE_FORM_URL + encodeURIComponent(email), '_blank');
+  window.open(GOOGLE_FORM_URL, '_blank');
   const box = document.getElementById('signup-box');
-  box.innerHTML = '<div style="padding:20px 0"><div style="font-size:40px;margin-bottom:12px">✓</div><h3 style="font-family:var(--display);font-weight:700;font-size:22px;color:#2BFFA8;margin-bottom:8px">You\'re In.</h3><p style="font-size:14px;color:var(--muted)">We\'ll reach out when FairTix is ready for you.</p></div>';
+  box.innerHTML = '<div style="padding:20px 0"><div style="font-size:40px;margin-bottom:12px">✓</div><h3 style="font-family:var(--display);font-weight:700;font-size:22px;color:#2BFFA8;margin-bottom:8px">You\'re In.</h3><p style="font-size:14px;color:var(--muted)">Complete the form to confirm your spot on the waitlist.</p></div>';
 }
 
 // ══════════ SCROLL REVEAL ══════════
